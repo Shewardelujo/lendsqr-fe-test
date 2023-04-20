@@ -10,21 +10,6 @@ interface User {
 const initialState: User = { user: [], status: "idle", error: null };
 
 // Define the async thunk for fetching a user data
-// export const fetchUser = createAsyncThunk(
-//   "users/fetchUser",
-//   async (userId: number) => {
-//     try {
-//       const { data } = await axios.get(
-//         `https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/${userId}`
-//       );
-//       localStorage.setItem("user", JSON.stringify(data));
-//       return data;
-//     } catch (error: any) {
-//       const message = error.response?.data?.message || "Unknown error";
-//       throw new Error(`Failed to fetch user: ${message}`);
-//     }
-//   }
-// );
 export const fetchUser = createAsyncThunk(
   "users/fetchUser",
   async (userId: number) => {
@@ -32,12 +17,27 @@ export const fetchUser = createAsyncThunk(
       const { data } = await axios.get(
         `https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/${userId}`
       );
+      localStorage.setItem("user", JSON.stringify(data));
       return data;
     } catch (error: any) {
-      throw error.response.data.message;
+      const message = error.response?.data?.message || "Unknown error";
+      throw new Error(`Failed to fetch user: ${message}`);
     }
   }
 );
+// export const fetchUser = createAsyncThunk(
+//   "users/fetchUser",
+//   async (userId: number) => {
+//     try {
+//       const { data } = await axios.get(
+//         `https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/${userId}`
+//       );
+//       return data;
+//     } catch (error: any) {
+//       throw error.response.data.message;
+//     }
+//   }
+// );
 
 // Define the user slice
 const userSlice = createSlice({
