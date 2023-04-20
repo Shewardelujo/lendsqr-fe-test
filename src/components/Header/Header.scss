@@ -1,0 +1,117 @@
+.header {
+    position: sticky;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    z-index: 999;
+    padding-right: 30px;
+    padding-left: 30px;
+    background: #FFFFFF;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+    height: 100px;
+    width: 100vw;
+
+    .brandImage {
+        height: 30px;
+    }
+
+    .search-input {
+        padding-right: 100px;
+        // padding-left: 100px;
+    }
+
+    .userImage {
+        width: 48px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .menu {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    input {
+        background: #FFFFFF;
+        opacity: 0.2;
+        border: 1px solid #213F7D;
+        border-radius: 8px;
+        padding: 10px 20px;
+    }
+
+    input[type=text]:focus {
+        box-shadow: none !important;
+        ;
+    }
+
+    .input-group .btn {
+        background: #39CDCC;
+        color: #FFFFFF;
+        padding-left: 21px;
+        padding-right: 21px;
+    }
+
+    .docs-text {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #213F7D;
+    }
+
+    .icon {
+        color: #213F7D;
+        margin-left: 50px;
+        margin-right: 20px;
+    }
+
+    .username {
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #213F7D;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .search-input {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+        .icon {
+            margin-left: 20px;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        .menu {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+
+        .docs-text,
+        .icon,
+        .username,
+        .dropdown {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .header {
+        padding-left: 0px;
+        padding-right: 0px;
+        height: 140px;
+    }
+}
