@@ -99,7 +99,7 @@ const Users: React.FunctionComponent = () => {
                                 <td>N/A</td>
                                 <td>
                                     <div>
-                                        <i className="fa-solid fa-ellipsis-vertical" data-bs-toggle="dropdown" ></i>
+                                        <i className="fa-solid fa-ellipsis-vertical" data-bs-toggle="dropdown"></i>
                                         <div className='dropdown-menu action-popup'>
                                             <Menu icon={NPView} title="View Details" isForActionMenu={true} hasClick={true} click={() => {
                                                 navigate(`/users/${user.id}`)
