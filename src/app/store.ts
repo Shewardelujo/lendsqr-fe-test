@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import sidebarSlice from "../components/Sidebar/sidebarSlice";
+import usersSlice from "../pages/Users/usersSlice";
 
 export const store = configureStore({
   reducer: {
     sidebar: sidebarSlice,
+    users: usersSlice,
   },
 });
 

@@ -3,6 +3,7 @@ import WithLayout from './components/HOC/HOC';
 import NotFound from './components/NotFound/NotFound';
 import Login from './pages/Login/Login';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Users from './pages/Users/Users';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path='/' element={<Login />} />
-          {/* <Route path='/users' element={<WithLayout component={Users}/>} /> */}
+          <Route path='/users' element={<WithLayout component={Users}/>} />
           <Route path='*' element={<WithLayout component={NotFound}/>} />
           
         </Routes>
