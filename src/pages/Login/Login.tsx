@@ -83,14 +83,6 @@ const Login: React.FunctionComponent = () => {
             onChange={handleEmailChange}
           />
           {emailError && <p className=" error-msg mt-2">{emailError}</p>}
-          {/* <input
-            type="text"
-            placeholder="Password"
-            className="col-12 mt-4"
-            value={password}
-            onChange={handlePasswordChange}
-          />
-          {passwordError && <p className="mt-2 error-msg">{passwordError}</p>} */}
           <div className="password-input-container mt-4">
             <input
               type={inputType}

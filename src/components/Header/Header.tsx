@@ -66,7 +66,6 @@ const Header: React.FunctionComponent = () => {
           <Link
             to="/"
                 className="dropdown-item waves-effect waves-light pointer px-0"
-                style={{ width: "30px" }}
           >
             Log out
           </Link>
