@@ -1,0 +1,52 @@
+    .menu-wrapper {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        cursor: pointer;
+
+        .menu-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            opacity: 0.6;
+            margin-left: 30px;
+        }
+
+        .menu-title {
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            // color: #213F7D;
+            color: rgba(33, 63, 125, 0.6);
+        }
+
+        .action-menu-title {
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            color: #545F7D !important;
+            margin-left: 10px;
+        }
+
+        .action-menu-icon {
+            color: #545F7D;
+        }
+
+    }
+
+    .active {
+        background: rgba(57, 205, 204, 0.06) !important;
+        border-left: 3px solid #39CDCC;
+
+        .menu-icon {
+            opacity: 1 !important;
+        }
+
+        .menu-title {
+            color: #213F7D !important;
+        }
+    }
