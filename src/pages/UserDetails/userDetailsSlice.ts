@@ -20,7 +20,8 @@ export const fetchUser = createAsyncThunk(
       localStorage.setItem("user", JSON.stringify(data));
       return data;
     } catch (error: any) {
-      throw error.response.data.message;
+      const message = error.response?.data?.message || "Unknown error";
+      throw new Error(`Failed to fetch user: ${message}`);
     }
   }
 );

@@ -2,7 +2,10 @@ import UserDetailItem from "../UserDetailItem/UserDetailItem";
 import "./UserDetailsSectionedInfo.scss";
 
 const UserDetailsSectionedInfo = () => {
-  const user = JSON.parse(localStorage.getItem("user") || "");
+  // const user = JSON.parse(localStorage.getItem("user") || "");
+
+  const userString = localStorage.getItem("user");
+  const user = userString ? JSON.parse(userString) : null;
 
   return (
     <div className="user-details-card-section">
