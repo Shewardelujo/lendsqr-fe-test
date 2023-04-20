@@ -13,12 +13,10 @@ const initialState: User = { user: [], status: "idle", error: null };
 export const fetchUser = createAsyncThunk(
   "users/fetchUser",
   async (userId: number) => {
-    console.log("UserId", userId);
     try {
       const { data } = await axios.get(
         `https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/${userId}`
       );
-      console.log("data", data);
       localStorage.setItem("user", JSON.stringify(data));
       return data;
     } catch (error: any) {
