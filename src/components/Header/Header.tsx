@@ -16,6 +16,12 @@ const Header: React.FunctionComponent = () => {
     dispatch(toggleSidebar());
   }
 
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleDropdownClick = () => {
+    setShowDropdown(!showDropdown);
+  };
+
 
   return (
     <div className="header d-flex align-items-center row g-3">
@@ -42,25 +48,30 @@ const Header: React.FunctionComponent = () => {
         <div className=" d-flex align-items-center">
           <img src={user} alt="user-icon" className="userImage" />
           <div className="username">Adedeji</div>
-          <div className="nav-item dropdown">
-          <img
-              src={downArrow}
-              alt="down-icon"
-            className="nav-link arrow px-0"
-            id="navbarDropdownMenuLink-4"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          />
-          <div
-            className="dropdown-menu dropdown-menu-right dropdown-info"
-            aria-labelledby="navbarDropdownMenuLink-4"
+        <div className="nav-item dropdown">
+        <img
+          src={downArrow}
+          alt="down-icon"
+          className="nav-link arrow px-0"
+          id="navbarDropdownMenuLink-4"
+          onClick={handleDropdownClick}
+        />
+        <div
+          className={`dropdown-menu dropdown-menu-right dropdown-info text-center ${
+            showDropdown ? "show" : ""
+          }`}
+          aria-labelledby="navbarDropdownMenuLink-4"
+          style={{ position: "absolute", top: "35px", left: "-120px" }}
+        >
+          <Link
+            to="/"
+                className="dropdown-item waves-effect waves-light pointer px-0"
+                style={{ width: "30px" }}
           >
-            <Link to=""
-              className="dropdown-item waves-effect waves-light pointer"
-              >Log out</Link>
-          </div>
-          </div>
+            Log out
+          </Link>
+        </div>
+      </div>
           <img
             className="menu"
             src={menuBurger}

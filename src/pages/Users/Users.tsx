@@ -19,7 +19,7 @@ const Users: React.FunctionComponent = () => {
     const navigate = useNavigate();
     const users = useAppSelector((state: any) => state.users.users);
     const status = useAppSelector((state: any) => state.users.status);
-    const error = useAppSelector((state: any) => state.users.error);
+    // const error = useAppSelector((state: any) => state.users.error);
 
     useEffect(() => {
     if (status === "idle") {
@@ -50,37 +50,37 @@ const Users: React.FunctionComponent = () => {
               <tr className='table-header'>
                 <th className='text-nowrap'>organization
                     <span>
-                        <img src={FilterIcon} alt="filter-icon" className=" filter-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" />        
+                        <img src={FilterIcon} alt="filter-icon" className=" filter-icon dropdown-toggle" data-bs-toggle="dropdown" />        
                         <Filter/>
                     </span>                                    
                 </th>
                 <th className='text-nowrap'>Username
                     <span>
-                        <img src={FilterIcon} alt="filter-icon" className=" filter-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" />        
+                        <img src={FilterIcon} alt="filter-icon" className=" filter-icon dropdown-toggle" data-bs-toggle="dropdown" />        
                         <Filter/>
                     </span>    
                 </th>
                 <th className='text-nowrap'>email
                     <span>
-                        <img src={FilterIcon} alt="filter-icon" className=" filter-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" />        
+                        <img src={FilterIcon} alt="filter-icon" className=" filter-icon dropdown-toggle" data-bs-toggle="dropdown" />        
                         <Filter/>
                     </span>    
                 </th>
                 <th className='text-nowrap'>Phone number
                     <span>
-                        <img src={FilterIcon} alt="filter-icon" className=" filter-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" />        
+                        <img src={FilterIcon} alt="filter-icon" className=" filter-icon dropdown-toggle" data-bs-toggle="dropdown" />        
                         <Filter/>
                     </span>   
                 </th>
                 <th className='text-nowrap'>Date joined
                     <span>
-                        <img src={FilterIcon} alt="filter-icon" className=" filter-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" />        
+                        <img src={FilterIcon} alt="filter-icon" className=" filter-icon dropdown-toggle" data-bs-toggle="dropdown" />        
                         <Filter/>
                     </span>
                 </th>
                 <th className='text-nowrap'>Status
                     <span>
-                        <img src={FilterIcon} alt="filter-icon" className=" filter-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" />        
+                        <img src={FilterIcon} alt="filter-icon" className=" filter-icon dropdown-toggle" data-bs-toggle="dropdown" />        
                         <Filter/>
                     </span>
                 </th>
@@ -99,7 +99,7 @@ const Users: React.FunctionComponent = () => {
                                 <td>N/A</td>
                                 <td>
                                     <div>
-                                        <i className="fa-solid fa-ellipsis-vertical" data-bs-toggle="dropdown" aria-expanded="false" ></i>
+                                        <i className="fa-solid fa-ellipsis-vertical" data-bs-toggle="dropdown"></i>
                                         <div className='dropdown-menu action-popup'>
                                             <Menu icon={NPView} title="View Details" isForActionMenu={true} hasClick={true} click={() => {
                                                 navigate(`/users/${user.id}`)
