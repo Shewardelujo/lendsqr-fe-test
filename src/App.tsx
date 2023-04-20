@@ -14,7 +14,7 @@ function App() {
           <Route path='/' element={<Login />} />
           <Route path='/users' element={<WithLayout component={Users}/>} />
           <Route path='/users/:userId' element={<WithLayout component={UserDetails}/>} />
-          <Route path='*' element={<WithLayout component={NotFound}/>} />
+          <Route path='*' element={<NotFound />}  />
           
         </Routes>
     </div>
