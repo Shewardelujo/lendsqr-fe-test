@@ -1,0 +1,111 @@
+.sidebar,
+.sidebarMobile {
+    height: calc(100vh - 100px);
+    position: fixed;
+    width: 283px;
+    left: 0px;
+    top: 100px;
+    overflow-y: scroll;
+    background: #FFFFFF;
+    ;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .sidebar-top-section {
+        margin-bottom: 41px;
+    }
+
+    // .sidebar-bottom-section {
+    // }
+
+    .sidebar-first-menu {
+        margin-bottom: 52px;
+        cursor: pointer;
+    }
+
+    .sidebar-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        margin-left: 30px;
+    }
+
+    .sidebar-logout-icon {
+        margin-left: 0px !important;
+    }
+
+    .sidebar-menu {
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #213F7D;
+    }
+
+    .sidebar-dropdown {
+        width: 14px;
+        height: 14px;
+        margin-left: 10px;
+    }
+
+    .sidebar-bottom-sub-section-title {
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #545F7D;
+        margin-bottom: 10px;
+        margin-left: 30px;
+    }
+
+    .sidebar-logout-section {
+        .sidebar-hr {
+            width: 100%;
+            opacity: 0.1;
+            border: 1px solid #213F7D;
+            margin: 50px 0 20px 0 !important;
+        }
+
+        .sidebar-logout-section-features {
+            margin-left: 30px;
+        }
+
+        .app-version {
+            margin-top: 40px;
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #213F7D;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(179, 179, 179);
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 991px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+.sidebarMobile {
+    z-index: 999;
+    height: calc(100vh - 140px);
+    top: 140px;
+}
