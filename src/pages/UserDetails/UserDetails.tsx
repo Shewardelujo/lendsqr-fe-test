@@ -83,7 +83,7 @@ const UserDetails = () => {
               <div className="user-details-back-text">Back to Users</div>
             </div>
             <div className="d-md-flex align-items-md-center justify-content-md-between user-details-first-section-details">
-              <div className="user-page-title mb-0">User Details</div>
+              <div className="user-page-title mb-md-0 mb-2">User Details</div>
               <div className="user-details-button-wrapper">
                 <button className="btn user-details-button blacklist-btn mb-2 mb-md-0">
                   Blacklist User

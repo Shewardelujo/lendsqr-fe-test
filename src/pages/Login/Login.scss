@@ -99,6 +99,37 @@ input {
 .link {
     margin-top: 24px;
 }
+.password-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-input {
+  width: 100%;
+  padding-right: 40px; /* make room for the button */
+}
+
+.password-show-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: #555;
+  cursor: pointer;
+
+    font-family: 'Avenir Next';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: #39CDCC;
+}
 
 @media screen and (max-width: 991px) {
     .left-section {
