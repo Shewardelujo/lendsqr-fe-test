@@ -1,0 +1,108 @@
+@import url('https://fonts.cdnfonts.com/css/avenir-next-lt-pro');
+@import url('https://fonts.cdnfonts.com/css/avenir-next-cyr');
+
+* {
+    font-family: 'Avenir Next LT Pro';
+    font-style: normal;
+}
+
+.login-page {
+    height: 100vh;
+}
+
+.left-section {
+    background-color: #FFFFFF;
+    padding: 48px 60px;
+}
+
+img {
+    opacity: 0.9;
+}
+
+.left-section-main {
+    min-height: calc(100vh - 150px);
+    background-image: url('../../assets/images/pablo-sign-in.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
+
+.right-section {
+    background-color: #FFFFFF;
+    padding-left: 70px;
+    padding-right: 100px;
+}
+
+.right-section-header {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 55px;
+    letter-spacing: -0.04em;
+    color: #213F7D;
+    padding-top: 10px;
+}
+
+.right-section-info {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: #545F7D;
+    padding-bottom: 60px;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.forgot-password-text {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    color: #39CDCC;
+    text-decoration: none;
+}
+
+.login-btn {
+    background: #39CDCC;
+    border: #39CDCC;
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 24px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.1em;
+}
+
+input {
+    border-radius: 5px;
+    padding: 8px 16px;
+    border: 2px solid rgba(84, 95, 125, 0.15);
+    outline: none;
+}
+
+::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #545F7D;
+    opacity: 0.6;
+}
+
+.error-msg {
+    color: red;
+}
+
+.link {
+    margin-top: 24px;
+}
+
+@media screen and (max-width: 991px) {
+    .left-section {
+        display: none;
+
+    }
+}
