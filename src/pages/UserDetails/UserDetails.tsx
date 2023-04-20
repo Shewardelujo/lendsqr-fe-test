@@ -48,23 +48,23 @@ const UserDetails = () => {
   const status = useAppSelector((state: any) => state.user.status);
   const error = useAppSelector((state: any) => state.user.error);
 
-  //   useEffect(() => {
-  //     if (status === "idle") {
-  //       dispatch(fetchUser(Number(userId)));
-  //     }
-  //   }, [dispatch, status, user, userId]);
+    useEffect(() => {
+      if (status === "idle") {
+        dispatch(fetchUser(Number(userId)));
+      }
+    }, [dispatch, status, userId]);
 
-  useEffect(() => {
-    if (status === "idle") {
-      dispatch(fetchUser(Number(userId)))
-        .then((data) => {
-          localStorage.setItem("user", JSON.stringify(data.payload));
-        })
-        .catch((error) => {
-          // handle error
-        });
-    }
-  }, [dispatch, status, userId]);
+//   useEffect(() => {
+//     if (status === "idle") {
+//       dispatch(fetchUser(Number(userId)))
+//         .then((data) => {
+//           localStorage.setItem("user", JSON.stringify(data.payload));
+//         })
+//         .catch((error) => {
+//           // handle error
+//         });
+//     }
+//   }, [dispatch, status, userId]);
 
   // material ui tab
   const [value, setValue] = React.useState(0);
